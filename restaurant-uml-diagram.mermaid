@@ -1,0 +1,69 @@
+classDiagram
+    class MenuItem {
+        +name: str
+        +price: float
+        +__init__(name: str, price: float)
+        +calculate_total_price() float
+    }
+    
+    class Cafe {
+        +__init__()
+    }
+    
+    class Postre {
+        +__init__()
+    }
+    
+    class Agua {
+        +__init__()
+    }
+    
+    class CocaCola {
+        +__init__()
+    }
+    
+    class Nachos {
+        +__init__()
+    }
+    
+    class Ensalada {
+        +__init__()
+    }
+    
+    class Hamburguesa {
+        +__init__()
+    }
+    
+    class Pizza {
+        +__init__()
+    }
+    
+    class TacosVegetarianos {
+        +__init__()
+    }
+    
+    class Lasaña {
+        +__init__()
+    }
+    
+    class Order {
+        +items: List[MenuItem]
+        +__init__()
+        +add_item(item: MenuItem) void
+        +calculate_total() float
+        +apply_discount() float
+        +show_order_summary() void
+    }
+    
+    MenuItem <|-- Cafe
+    MenuItem <|-- Postre
+    MenuItem <|-- Agua
+    MenuItem <|-- CocaCola
+    MenuItem <|-- Nachos
+    MenuItem <|-- Ensalada
+    MenuItem <|-- Hamburguesa
+    MenuItem <|-- Pizza
+    MenuItem <|-- TacosVegetarianos
+    MenuItem <|-- Lasaña
+    
+    Order o-- MenuItem : contains
