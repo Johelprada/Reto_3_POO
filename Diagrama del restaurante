@@ -1,3 +1,4 @@
+'''
 classDiagram
     class MenuItem {
         +name: str
@@ -67,3 +68,4 @@ classDiagram
     MenuItem <|-- Lasaña
     
     Order o-- MenuItem : contains
+'''
